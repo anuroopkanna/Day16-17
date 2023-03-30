@@ -16,18 +16,18 @@ public class SortedLinkedList< T extends Comparable<T>> {
     }
     public void searchElement(T search) {
         Node<T> temp = head;
-        boolean flag= false;
+        boolean choose = false;
         while(temp!=null)
         {
             if(temp.data==search)
             {
-                flag=true;
+                choose =true;
 //                System.out.println("data deleted successfully");
                 deleteAnyElement(search);
             }
             temp=temp.next;
         }
-        if(!flag){
+        if(!choose){
             add(search);
             System.out.println("data added successfully");
         }
